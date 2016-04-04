@@ -4,7 +4,7 @@ mongoose.connect('mongodb://test:test@ds015780.mlab.com:15780/yulontest');
 var Schema = mongoose.Schema;
 
 var personSchema = new Schema({
-  firstname : String,
-  lastname  : String
+  workname : String,
+  contentname  : String
 });
 module.exports = mongoose.model('Person', personSchema);
