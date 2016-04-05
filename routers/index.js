@@ -9,7 +9,7 @@ var express = require('express'),
     router  = express.Router();
 
 router.route('/').get(index);
-router.route('/person').post(index);
+router.route('/person').post(person);
 
 router.route('/person/:id');
 

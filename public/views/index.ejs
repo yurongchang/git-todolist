@@ -27,14 +27,15 @@
 					</thead>
 					<tbody>
 						<% if (userinfos.length) { %>
-				  		  <% userinfos.forEach(function(userinfo){ %>
-									<tr>
-							      <td><%= userinfo['workname'] %></td>
-										<td><%= userinfo['contentname'] %></td>
-									</tr>
+						   	  <% userinfos.forEach(function(userinfo){ %>
+										<tr>
+								      <td><%= userinfo['workname'] %> </td>
+								       <td> <%= userinfo['contentname'] %> </td>
+								 		</tr>
 						    <% }) %>
 						<% } %>
 					</tbody>
+				</table>
 					<!-- <% if (userinfos.length) { %>
 					  <ul class="list-group">
 			  		  <% userinfos.forEach(function(userinfo){ %>
@@ -42,13 +43,11 @@
 					    <% }) %>
 				  	</ul>
 					<% } %> -->
-				</table>
 				</div>
 		</div>
 
 		<script src="js/jquery.min.js"></script>
 	  <script src="js/bootstrap.min.js"></script>
 	  <script src="js/wow.min.js"></script>
-	  <script src="js/script.js"></script>
 	</body>
 </html>
