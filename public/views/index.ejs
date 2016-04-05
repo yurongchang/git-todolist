@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js" ></script>
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <title>To-Do-List</title>
+	  <link rel="stylesheet" href="../css/bootstrap.min.css">
+	  <link rel="stylesheet" href="../css/animate.css">
+		<link href="../css/style.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="panel panel-primary todolist">
+			<div class="panel-heading"><h1>To Do List!!</h1></div>
+			<div class="panel-body">
+				<form method="POST" action="/person">
+						<input type="text" id="workname" name="workname" placeholder="工作名稱" /><br />
+						<input type="text" id="contentname" name="contentname" placeholder="工作內容" /><br />
+					<input type="submit" value="送出" />
+				</form>
+				<h1>Data Stored</h1>
+				<table class="table">
+					<thead>
+						<tr>
+							<th>工作名稱</th>
+							<th>工作內容</th>
+						</tr>
+					</thead>
+					<tbody>
+						<% if (userinfos.length) { %>
+						  <tr>
+				  		  <% userinfos.forEach(function(userinfo){ %>
+						      <td><%= userinfo['workname'] %></td>
+									<td><%= userinfo['contentname'] %></td>
+						    <% }) %>
+					  	</tr>
+						<% } %>
+					</tbody>
+					<!-- <% if (userinfos.length) { %>
+					  <ul class="list-group">
+			  		  <% userinfos.forEach(function(userinfo){ %>
+					      <li class="list-group-item"><%= userinfo['workname'] %>  <%= userinfo['contentname'] %></li>
+					    <% }) %>
+				  	</ul>
+					<% } %> -->
+				</table>
+				</div>
+		</div>
+
+		<script src="js/jquery.min.js"></script>
+	  <script src="js/bootstrap.min.js"></script>
+	  <script src="js/wow.min.js"></script>
+	  <script src="js/script.js"></script>
+	</body>
+</html>
