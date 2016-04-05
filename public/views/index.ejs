@@ -27,12 +27,12 @@
 					</thead>
 					<tbody>
 						<% if (userinfos.length) { %>
-						  <tr>
 				  		  <% userinfos.forEach(function(userinfo){ %>
-						      <td><%= userinfo['workname'] %></td>
-									<td><%= userinfo['contentname'] %></td>
+									<tr>
+							      <td><%= userinfo['workname'] %></td>
+										<td><%= userinfo['contentname'] %></td>
+									</tr>
 						    <% }) %>
-					  	</tr>
 						<% } %>
 					</tbody>
 					<!-- <% if (userinfos.length) { %>

@@ -9,13 +9,8 @@ var express = require('express'),
     router  = express.Router();
 
 router.route('/').get(index);
-router.route('/person').post(person)
-  .post(create)
-  .get(readall);
+router.route('/person').post(index);
 
-router.route('/person/:id')
-  .get(read)
-  .put(update)
-  .delete(del);
+router.route('/person/:id');
 
 module.exports = router;
