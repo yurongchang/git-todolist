@@ -1,11 +1,7 @@
 var Person = require('../models/person');
 
 module.exports = function(req,res,next){
-  Person.find({},function(err,users){
-    if(err) throw err;
-    res.render('index',{userinfos:users});
-  });
-  
+  //res.send('Thank you!');
   var person = new Person({
     workname:req.body.workname,
     contentname:req.body.contentname
@@ -13,5 +9,9 @@ module.exports = function(req,res,next){
   person.save(function(err){
     if(err) throw err;
     console.log('person saved!');
+  });
+  Person.find({},function(err,users){
+    if(err) throw err;
+    res.render('index',{userinfos:users});
   });
 };
