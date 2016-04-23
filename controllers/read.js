@@ -4,6 +4,7 @@ module.exports = function(){
   Person.findOne({_id:req.params.id},function(err,user){
     if(err) throw err;
 
-    res.json({userinfo:user});
+    //res.json({userinfo:user});
+    res.render('index',{userinfo:user});
   });
 };

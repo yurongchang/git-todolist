@@ -4,6 +4,7 @@ module.exports = function(){
   Person.find({},function(err,users){
     if(err) throw err;
 
-    res.json({userinfos:users});
+    //res.json({userinfos:users});
+    res.render('index',{userinfos:users});
   })
 };

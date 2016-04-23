@@ -13,9 +13,7 @@
 			<div class="panel-heading"><h1>To Do List!!</h1></div>
 			<div class="panel-body">
 				<form method="POST" action="/person">
-						<input type="text" id="workname" name="workname" placeholder="工作名稱" /><br />
-						<input type="text" id="contentname" name="contentname" placeholder="工作內容" /><br />
-					<input type="submit" value="送出" />
+					<%- include('form'); %>
 				</form>
 				<h1>Data Stored</h1>
 				<table class="table">
@@ -26,28 +24,17 @@
 						</tr>
 					</thead>
 					<tbody>
-						<% if (userinfos.length) { %>
-						   	  <% userinfos.forEach(function(userinfo){ %>
-										<tr>
-								      <td><%= userinfo['workname'] %> </td>
-								       <td> <%= userinfo['contentname'] %> </td>
-								 		</tr>
-						    <% }) %>
-						<% } %>
+						<%- include('person'); %>
 					</tbody>
 				</table>
-					<!-- <% if (userinfos.length) { %>
-					  <ul class="list-group">
-			  		  <% userinfos.forEach(function(userinfo){ %>
-					      <li class="list-group-item"><%= userinfo['workname'] %>  <%= userinfo['contentname'] %></li>
-					    <% }) %>
-				  	</ul>
-					<% } %> -->
 				</div>
 		</div>
+
+		<div id="userupdate"></div>
 
 		<script src="js/jquery.min.js"></script>
 	  <script src="js/bootstrap.min.js"></script>
 	  <script src="js/wow.min.js"></script>
+		<script src="js/script.js"></script>
 	</body>
 </html>
